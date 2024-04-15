@@ -1,8 +1,12 @@
-name: Manual workwload testing
+name: Workwfoad testing
 
 on:
   workflow_dispatch:
-
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
 jobs:
   experimental-greet:
     runs-on: ubuntu-latest
